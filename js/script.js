@@ -10,6 +10,9 @@ logInPageBtn.addEventListener("click", logInPagePopup);
 
 let loggedIn = false;
 
+let consultant = ["Telavox", "Aeb software", "Advania", "knowIT", "wise IT", "Front IT öresund", "Great IT", "Living IT", "Consid", "Intendit", "Xlent", "Advicon", "Atea", "CGI", "Manpower", "Semcon", "Dreamwork", "Student consulting", "Academic Work", "Poolia", "ANTS", "HF IT LÖSNINGAR", "Litebreeze", "It Support Ystad", "Future IT", "SolidX AB"];
+let consultantList = consultant.sort();
+
 function logIn(event){
     event.preventDefault();
     console.log(select.value);
