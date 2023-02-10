@@ -8,7 +8,7 @@ body {
 }
 
 #navTop {
-    height: 60px;
+    height: 75px;
     width: 100%;
     background-color: darkgray;
     display: flex;
@@ -45,6 +45,12 @@ form div {
     justify-content: center;
     align-items: center;
     /* width: 20%; */
+    background-color: lightcyan;
+}
+
+form{
+    width: 20%;
+    font-size: 120%;
 }
 
 form * {
@@ -57,7 +63,7 @@ form * {
 }
 
 div {
-    border: red solid 1px;
+    /* border: red solid 1px; */
 }
 
 #leftSideNav {
@@ -66,6 +72,7 @@ div {
 }
 
 h1,
+h2,
 p {
     margin: 0;
     padding: 5px;
@@ -84,13 +91,16 @@ p {
 }
 
 article{
-    width: 300px;
+    width: 30%;
     aspect-ratio: 1.5/1;
     margin: 10px;
-    border: 1px black solid;
+    border: 2px black solid;
     border-radius: 20px;
     background-color: azure;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo{
