@@ -1,0 +1,99 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    /* background-color: blue; */
+}
+
+#navTop {
+    height: 60px;
+    width: 100%;
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navTop div{
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#navTop button{
+    margin-right: 1%;
+}
+
+#navTop h1{
+    margin-left: 1%;
+}
+
+div#form {
+    /* display: flex; */
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+    display: none;
+}
+
+form,
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 20%; */
+}
+
+form * {
+    text-align: center;
+    margin: 2px;
+}
+
+#logInBtn {
+    width: 50%;
+}
+
+div {
+    border: red solid 1px;
+}
+
+#leftSideNav {
+    background-color: transparent;
+
+}
+
+h1,
+p {
+    margin: 0;
+    padding: 5px;
+}
+
+#businessLogIn{
+    display: none;
+}
+
+#articleContainer{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20%;
+    background-color: transparent;
+}
+
+article{
+    width: 300px;
+    aspect-ratio: 1.5/1;
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 20px;
+    background-color: azure;
+    text-align: center;
+}
+
+.logo{
+    /* height: 100%; */
+    width: 100px;
+}
