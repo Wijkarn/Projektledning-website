@@ -2,68 +2,72 @@ const logInBtn = document.querySelector("#formBtn");
 const select = document.querySelector("#select");
 const logInPageBtn = document.querySelector("#logInPageBtn");
 const formDiv = document.querySelector("#form");
-const username = document.querySelectorAll(".username");
+const profileBtn = document.querySelector(".profile");
 
 logInBtn.addEventListener("click", logIn);
-select.addEventListener("click", selectFunc);
 logInPageBtn.addEventListener("click", logInPagePopup);
+profileBtn.addEventListener("click", showProfilePage);
 
-let loggedIn = false;
+let studentLoggedIn = false;
+let businessLoggedIn = false;
 
 let consultant = ["Telavox", "Aeb software", "Advania", "knowIT", "wise IT", "Front IT öresund", "Great IT", "Living IT", "Consid", "Intendit", "Xlent", "Advicon", "Atea", "CGI", "Manpower", "Semcon", "Dreamwork", "Student consulting", "Academic Work", "Poolia", "ANTS", "HF IT LÖSNINGAR", "Litebreeze", "It Support Ystad", "Future IT", "SolidX AB"];
 let consultantList = consultant.sort();
 
-function logIn(event){
+function logIn(event) {
     event.preventDefault();
-    console.log(select.value);
-    const user = document.querySelector("#logInInput").value
-    
-    if(!loggedIn){
-        logInPageBtn.innerText ="logga ut";
-        loggedIn = true;
-        for(let i = 0; i < username.length; i++){
-            username[i].innerText = user;
+
+    if (!studentLoggedIn && !businessLoggedIn) {
+        if (select.value == "student") {
+            studentLoggedIn = true;
+            profileBtn.innerText = "Student";
         }
+        else {
+            businessLoggedIn = true;
+            profileBtn.innerText = "Företag";
+        }
+        profileBtn.style.display = "block";
+        logInPageBtn.innerText = "logga ut";
     }
-    else{
-        loggedIn = false;
+    else {
+        studentLoggedIn = false;
+        businessLoggedIn = false;
     }
-    formDiv.style.display = "none";
 
-    console.log(loggedIn);
+    console.log("student: ", studentLoggedIn, " Företag: ", businessLoggedIn);
+    formDiv.style.display = null;
 }
 
-function selectFunc(){
-    console.log(select.value);
-    const logInlabel = document.querySelector("#logIn");
-    const logInInput = document.querySelector("#logInInput");
+function logInPagePopup() {
 
-    if(select.value == "student"){
-        logInlabel.innerText = "Personnummer";
-        logInInput.placeholder = "yyyymmdd-xxxx"
-    }
-    else{
-        logInlabel.innerText = "Organisationsnummer";
-        logInInput.placeholder = "xxxxxx-xxxx";
-    }
-}
-
-function logInPagePopup(){
-    if(!loggedIn){
+    if (!studentLoggedIn && !businessLoggedIn) {
         formDiv.style.display = "flex";
     }
-    else{
-        formDiv.style.display = "none";
-        logInPageBtn.innerText ="logga in";
-        loggedIn = false;
-        for(let i = 0; i < username.length; i++){
-            username[i].innerText = "";
-        }
+    else {
+        profileBtn.style.display = null;
+        formDiv.style.display = null;
+        logInPageBtn.innerText = "logga in";
+        studentLoggedIn = false;
+        businessLoggedIn = false;
+        studentAdd.style.display = null;
+        articleContainer.style.display = "flex";
+        alert("You have been logged out!");
     }
 }
 
-const a = document.querySelectorAll("a");
+function showProfilePage() {
 
-for(let i = 0; i < a.length; i++){
-    a[i].style.color = "white";
+    studentAdd = document.querySelector("#studentAdd");
+    articleContainer = document.querySelector("#articleContainer");
+    addArticle = document.querySelector("#addArticle");
+
+    if(studentLoggedIn){
+        studentAdd.style.display = "flex";
+        articleContainer.style.display = "none";
+    }
+    else{
+        addArticle.style.display = "flex";
+        articleContainer.style.display = "none";
+    }
+
 }

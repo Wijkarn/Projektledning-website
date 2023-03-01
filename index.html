@@ -18,16 +18,14 @@
                 alt="logo">
             <h1>Grupp 2</h1>
         </div>
-        <!-- <div>
-            <p>random 1</p>
-            <p>random 2</p>
-            <p>random 3</p>
-        </div> -->
+
         <div id="navUser">
-            <p class="username"></p>
+            <p class="profile"></p>
             <button id="logInPageBtn">logga in</button>
         </div>
+
     </nav>
+
     <div id="form">
         <form>
             <div>
@@ -39,18 +37,54 @@
             </div>
 
             <div>
-                <label id="logIn" for="">Personnummer</label>
-                <input type="number" name="" id="logInInput" placeholder="yyyymmdd-xxxx">
+                <label id="logIn" for="email">Email</label>
+                <input type="number" name="email" placeholder="example@example.com">
+                <label for="password">Password</label>
+                <input type="password" name="password">
             </div>
 
             <button id="formBtn">Logga in</button>
 
         </form>
+
     </div>
-    <main>
+
+    <div id="studentAdd">
+
+        <h1>Ladda up CV och Personligt brev.</h1>
+        <!-- <h2>Drag</h2> -->
+        <p>Ladda upp CV</p>
+        <p>Ladda upp Personligt brev</p>
+
+    </div>
+
+    <div id="addArticle">
+
         <form>
-            
+
+            <label for="articleHeader">Företag</label>
+            <input type="text" name="articleHeader" id="articleHeaderInput">
+
+            <label for="articleMain">Innehåll</label>
+            <input type="text" name="articleMain" id="articleMainInput">
+
+            <label for="articleTime">När ska aritkeln laddas upp?</label>
+            <select name="" id="">
+                <option value="">Direkt</option>
+                <option value="">Vald tid</option>
+            </select>
+            <div>
+                
+            </div>
+
+            <button>Ladda upp!</button>
+
         </form>
+
+    </div>
+
+    <main>
+
         <div id="articleContainer">
             <article>
                 <h2>knowIT</h2>
@@ -59,15 +93,16 @@
                     fermentum. Morbi at sagittis velit, at tincidunt sem. Phasellus at mauris quis augue rutrum aliquet.
                     Sed enim.
                 </p>
-                <p>Publicerad 4 februari kl.10.32</p>
+                <p class="articlePublished">Publicerad 4 februari kl.10.32</p>
             </article>
             <article>
                 <h2>Living IT</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel orci at lorem cursus blandit. Ut
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel orci at lorem cursus blandit.
+                    Ut
                     mollis tortor eu sagittis feugiat. Sed eu libero nec ipsum efficitur imperdiet. Donec non.
                 </p>
-                <p>Publicerad 10 februari kl.16.45</p>
+                <p class="articlePublished">Publicerad 10 februari kl.16.45</p>
             </article>
             <article>
                 <h2>Future IT</h2>
@@ -75,7 +110,7 @@
                     Suspendisse a laoreet lectus. Quisque eu nulla vel lorem placerat ullamcorper. Maecenas in nisi ac
                     lacus euismod suscipit a a elit. Fusce convallis sagittis risus, eu accumsan ipsum varius imperdiet.
                 </p>
-                <p>Publicerad 1 februari kl.8.13</p>
+                <p class="articlePublished">Publicerad 1 februari kl.8.13</p>
             </article>
         </div>
     </main>

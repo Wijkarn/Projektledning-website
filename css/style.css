@@ -1,10 +1,13 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     border: 0;
     outline: 0;
-    /* background-color: blue; */
 }
 
 #navTop {
@@ -44,7 +47,6 @@ div#form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 20%; */
     background-color: lightcyan;
 }
 
@@ -99,6 +101,50 @@ article{
 }
 
 .logo{
-    /* height: 100%; */
     width: 100px;
+}
+
+#studentAdd{
+    width: 50%;
+    height: 30vh;
+    margin-inline: auto;
+    margin-top: 5vh;
+    background-color: azure;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid darkgray;
+    border-radius: 2vw;
+}
+
+#studentAdd p {
+    padding: 3%;
+    border-radius: 0.5vw;
+    border: 1px solid darkgray;
+    background-color: rgb(243, 243, 243);
+    font-size: 100%;
+}
+
+.profile{
+    border-radius: 0.5vw;
+    border: 3px solid lightgray;
+    padding: 1% 6%;
+    display: none;
+}
+
+#addArticle{
+    margin-inline: auto;
+    width: 30%;
+    text-align: center;
+}
+
+#addArticle form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addArticle form input{
+    width: 50%;
 }
