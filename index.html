@@ -14,9 +14,9 @@
     <nav id="navTop">
         <div>
             <img class="logo"
-                src="https://scontent-arn2-2.xx.fbcdn.net/v/t1.6435-9/166794587_4067653506620383_7209274636622528917_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=f1LXe746OiUAX-cbv_f&_nc_ht=scontent-arn2-2.xx&oh=00_AfAAPhebXwdxnCw64R5BLpFoYXDHEIhIQB6-rxYx2hFl3Q&oe=640DC164"
+                src="./img/Lia-Logo.png"
                 alt="logo">
-            <h1>Grupp 2</h1>
+            <h1>Lia Folket</h1>
         </div>
 
         <div id="navUser">
@@ -52,7 +52,6 @@
     <div id="studentAdd">
 
         <h1>Ladda up CV och Personligt brev.</h1>
-        <!-- <h2>Drag</h2> -->
         <p>Ladda upp CV</p>
         <p>Ladda upp Personligt brev</p>
 
@@ -66,18 +65,15 @@
             <input type="text" name="articleHeader" id="articleHeaderInput">
 
             <label for="articleMain">Innehåll</label>
-            <input type="text" name="articleMain" id="articleMainInput">
+            <textarea type="text" name="articleMain" id="articleMainInput" cols="40" rows="6"></textarea>
 
             <label for="articleTime">När ska aritkeln laddas upp?</label>
-            <select name="" id="">
-                <option value="">Direkt</option>
-                <option value="">Vald tid</option>
+            <select name="publishTime" id="publishArticle">
+                <option value="direct">Direkt</option>
+                <option value="choose">Vald tid</option>
             </select>
-            <div>
-                
-            </div>
 
-            <button>Ladda upp!</button>
+            <button id="publishButton">Ladda upp!</button>
 
         </form>
 
@@ -93,7 +89,7 @@
                     fermentum. Morbi at sagittis velit, at tincidunt sem. Phasellus at mauris quis augue rutrum aliquet.
                     Sed enim.
                 </p>
-                <p class="articlePublished">Publicerad 4 februari kl.10.32</p>
+                <p>Publicerad kl. 10:32 04-02-2023</p>
             </article>
             <article>
                 <h2>Living IT</h2>
@@ -102,7 +98,7 @@
                     Ut
                     mollis tortor eu sagittis feugiat. Sed eu libero nec ipsum efficitur imperdiet. Donec non.
                 </p>
-                <p class="articlePublished">Publicerad 10 februari kl.16.45</p>
+                <p>Publicerad kl. 14:32 01-02-2023</p>
             </article>
             <article>
                 <h2>Future IT</h2>
@@ -110,7 +106,7 @@
                     Suspendisse a laoreet lectus. Quisque eu nulla vel lorem placerat ullamcorper. Maecenas in nisi ac
                     lacus euismod suscipit a a elit. Fusce convallis sagittis risus, eu accumsan ipsum varius imperdiet.
                 </p>
-                <p class="articlePublished">Publicerad 1 februari kl.8.13</p>
+                <p>Publicerad kl. 08:56 03-03-2023</p>
             </article>
         </div>
     </main>
