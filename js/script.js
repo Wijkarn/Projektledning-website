@@ -6,11 +6,14 @@ const profileBtn = document.querySelector(".profile");
 const publishBtn = document.querySelector("#publishButton");
 const articleContainer = document.querySelector("#articleContainer");
 const addArticle = document.querySelector("#addArticle");
+const studentAddBtn = document.querySelector("#buttonStudentAdd");
+const studentAdd = document.querySelector("#studentAdd");
 
 logInBtn.addEventListener("click", logIn);
 logInPageBtn.addEventListener("click", logInPagePopup);
 profileBtn.addEventListener("click", showProfilePage);
 publishBtn.addEventListener("click", publishArticle);
+studentAddBtn.addEventListener("click", idk);
 
 let studentLoggedIn = false;
 let businessLoggedIn = false;
@@ -72,8 +75,6 @@ function showProfilePage() {
 
 function studentUpload() {
 
-    const studentAdd = document.querySelector("#studentAdd");
-
     studentAdd.style.display = "flex";
     articleContainer.style.display = "none";
 
@@ -127,3 +128,8 @@ function publishArticle(event) {
     }
 }
 
+function idk(event){
+    event.preventDefault();
+    articleContainer.style.display = "flex";
+    studentAdd.style.display = "none";
+}
