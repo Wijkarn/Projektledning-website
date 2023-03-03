@@ -58,6 +58,7 @@ function logInPagePopup() {
         businessLoggedIn = false;
         studentAdd.style.display = null;
         articleContainer.style.display = "flex";
+        addArticle.style.display = null;
         alert("You have been logged out!");
     }
 }
@@ -123,7 +124,7 @@ function publishArticle(event) {
         main.innerText = input;
         time.innerText = "Publisherad kl. ".concat(d.getHours(), ":", d.getMinutes(), " ", today);
 
-        addArticle.style.display = "none";
+        addArticle.style.display = null;
         articleContainer.style.display = "flex";
     }
 }
@@ -131,5 +132,5 @@ function publishArticle(event) {
 function idk(event){
     event.preventDefault();
     articleContainer.style.display = "flex";
-    studentAdd.style.display = "none";
+    studentAdd.style.display = null;
 }
